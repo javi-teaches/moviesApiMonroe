@@ -1,0 +1,12 @@
+<%- include('../partials/head')  %> 
+	<h1>Listado de películas</h1>
+	<ul>
+		<% for (const oneMovie of movies) { %>
+		<li> 
+			<b>Título:</b> <%= oneMovie.title %><br>
+			<a href="/movies/detail/<%= oneMovie.id %>">ver más</a> 
+			<br><br>
+		</li>	
+		<% } %>
+	</ul>
+<%- include('../partials/footer')  %>
