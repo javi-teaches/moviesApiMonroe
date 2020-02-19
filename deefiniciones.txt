@@ -1,0 +1,52 @@
+Grupo 1
+¿Qué es una API? 
+R/ Es una Aplicación donde pueden consultar distintas interfaces. Es un JSON o texto crudo.
+¿Para qué sirve?
+R/ Para que cualquier plataforma pueda consultar una DB.
+¿En qué casos podemos necesitar usar una API?
+R/ Si necesitamos consultar el clima nos tendremos que conectar a una API que provea esa data.
+¿En qué casos podemos necesitar crear una?
+R/ Si somos dueños de un banco, ejemplo del YEN, puedo hacer una api para que cualquiera la consulte
+
+Grupo 2
+¿Qué es un endpoint? 
+R/ Es una URL que se usa para consumir información de una API.
+¿En qué se diferencia con la URL de un sitio web?
+R/ la URL tradicional renderiza HTML + CSS y ese tipo de cosas, la API devuelve un JSON ó XML crudo.
+
+Grupo 3
+¿Qué es REST?
+R/ es una arquitectura avanzada en estándares WEB. Un lineamiento. Es stateless.
+¿Qué es una colección y qué es un recurso?
+R/ colección conjunto de recursos o elementos. Recurso -> contexto definido, es el dato.
+¿Qué endpoints típicos aparecen en una API Rest?
+R/ Ej -> CRUD
+http://localhost:3000/users - get
+http://localhost:3000/users - post
+http://localhost:3000/users/id - put || patch
+http://localhost:3000/users/id - delete
+http://localhost:3000/users/id - get
+
+Grupo 4
+A la hora de implementar un Endpoint en Express… 
+¿Qué pasos necesitamos? 
+R/ Pasos:
+a. Identificar los recursos o colecciones
+b. Crear la rutas (rutas únicas para la API - definir los métodos)
+c. Crear el controller
+d. Testear el endpoint
+
+¿Qué debemos tener en cuenta a diferencia de una URL tradicional?
+R/ Generalmente retorna un JSON y NO un html, podés poner totalizadores de los resultados. Query Strings, etc.
+
+Grupo 5
+¿Cómo puedo probar el Endpoint de una API? 
+R/ Se puede probar con POSTMAN.
+¿Es lo mismo si el pedido es por GET, por POST o por otro método HTTP?
+R/ Lo vimos anteriormente, NO es lo mismo. Ya que el navegador no admite ciertos métodos HTTP.
+
+Grupo 6
+¿Cómo se autentica a un usuario en una API?
+R/ Con Json Web Token, que asigna una clave que viaja en el cliente. La data viaja al servidor y el servidor responde con el token.
+¿En qué momentos de los pedidos y las respuestas aparece el JWT?
+R/ Cuando se quiere autenticar al usuario para poder responder con la data.

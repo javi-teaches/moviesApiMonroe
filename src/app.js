@@ -20,16 +20,18 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
 
 // Routes
-var indexRouter = require('./routes/indexRoutes');
-var usersRouter = require('./routes/usersRoutes');
-const moviesRoutes = require('./routes/moviesRoutes');
-const genresRoutes = require('./routes/genresRoutes');
+const indexRouter = require('./routes/indexRoutes');
+const usersRouter = require('./routes/usersRoutes');
+const moviesRouter = require('./routes/moviesRoutes');
+const genresRouter = require('./routes/genresRoutes');
+const moviesApiRouter = require('./routes/moviesApiRoutes');
 
 // Route Middleware
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/movies', moviesRoutes);
-app.use('/genres', genresRoutes);
+app.use('/movies', moviesRouter);
+app.use('/genres', genresRouter);
+app.use('/api/v1/movies', moviesApiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
